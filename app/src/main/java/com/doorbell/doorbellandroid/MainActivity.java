@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView messageTextView;
     TextView timeTextView;
     ImageView imageView;
+    TextView faceTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         messageTextView = findViewById(R.id.text_message);
         timeTextView = findViewById(R.id.text_time);
         imageView = findViewById(R.id.imageView);
+        faceTextView = findViewById(R.id.text_face);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("door/001");
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 Date date = new Date(value.getTime() * 1000);
                 timeTextView.setText("This alarm is received at: " + sf.format(date));
                 Picasso.get().load(value.getUrl()).into(imageView);
+                faceTextView.setText(value.getFace());
             }
 
             @Override

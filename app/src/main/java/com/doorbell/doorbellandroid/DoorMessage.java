@@ -4,6 +4,7 @@ public class DoorMessage {
 
     private String status;
     private String url;
+    private String face;
 
     public long getTime() {
         return time;
@@ -29,5 +30,13 @@ public class DoorMessage {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getFace() {
+        return face;
+    }
+
+    public void setFace(String face) {
+        this.face = face;
     }
 }

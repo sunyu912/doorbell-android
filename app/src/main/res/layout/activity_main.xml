@@ -33,4 +33,13 @@
         android:textAlignment="center"
         android:textSize="30sp" />
 
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_face"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The person is "
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
 </LinearLayout>
